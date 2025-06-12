@@ -1,0 +1,40 @@
+Start project with creating package.json file.
+//npm init -y
+
+then install require libraries
+//npm i express
+//npm i mongoose
+//npm i ejs
+
+create our projects main file app.js
+//touch app.js
+
+then imports library in app.js file
+//const express=require("express");
+//const app=express();
+//const mongoose=require("mongoose");
+
+start server 
+//app.listen()
+
+then establish connection with mongoose
+//async function main() {
+//    await mongoose.connect("mongodb://127.0.0.1:27017/wanderlust");
+//}
+
+establish path for homepage 
+//app.get()
+
+then create folder models to store all files related to model 
+create listing.js first model to set or store schema of places,etc details
+
+
+--Listing.js
+import mongoose and create schema of our data
+and define and create listing model and which creates collection in schema of plural form of model
+//const Listing=mongoose.model("Listing",listingSchema);
+export this model 
+//module.exports = Listing;
+
+create a new folder, name as init for data initialization for project and save data in data.js file
+then create index.js file in init folder to write logic
