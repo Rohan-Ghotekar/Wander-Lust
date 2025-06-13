@@ -38,3 +38,21 @@ export this model
 
 create a new folder, name as init for data initialization for project and save data in data.js file
 then create index.js file in init folder to write logic
+
+then import path for setting view folder
+//const path =require("path");
+
+then set path for ejs files in view and set view engine to ejs
+//app.set("view engine","ejs");
+//app.set("views",path.join(__dirname,"views"));
+
+now use following command to parse data which comming from urs
+//app.use(express.urlencoded({extended:true}))
+
+//toLocaleString("en-IN")  used this function to gave commas in ruppe amount according to standards
+
+install method over-ride package as we cannot send put request directly
+// npm i method-override
+//const methodOverride=require("method-override");
+//app.use(methodOverride("_method"));
+//<form method="post" action="/listings/<%=listing._id %>?_method=PUT"> 
