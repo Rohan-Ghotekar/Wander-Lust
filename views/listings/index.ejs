@@ -1,15 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderLust</title>
-</head>
+<% layout("layouts/boilerplate") %>
 <body>
     <h3>All Listings</h3>
-    <form action="/listing/new" method="get">
+    <!-- <form action="/listing/new" method="get">
         <button>Create New Listing</button>
-    </form>
+    </form> -->
+    <% for(let listing of allListings){ %>
+    <div class="card" style="width: 18rem;">
+  <img src="<%=listing.image.url%>" class="card-img-top" alt="Listing Image">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<%} %>
     <ul>
     <% for(let listing of allListings){ %>
         <li>
@@ -18,4 +22,3 @@
         <%} %>
     </ul>
 </body>
-</html>

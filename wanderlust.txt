@@ -56,3 +56,16 @@ install method over-ride package as we cannot send put request directly
 //const methodOverride=require("method-override");
 //app.use(methodOverride("_method"));
 //<form method="post" action="/listings/<%=listing._id %>?_method=PUT"> 
+
+
+Now next line get and extract data from body and converts into indivisual values
+//await Listing.findByIdAndUpdate(id,{...req.body.listing});
+
+install ejs-mate
+//npm i ejs-mate
+
+
+we use bootstrap for styling i we want to add own styling and want to override bootstrap styling add
+//.nav-link{
+//    color: #222222!important;
+//}
