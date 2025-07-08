@@ -65,7 +65,13 @@ install ejs-mate
 //npm i ejs-mate
 
 
-we use bootstrap for styling i we want to add own styling and want to override bootstrap styling add
+we use bootstrap for styling if we want to add own styling and want to override bootstrap styling add !important
 //.nav-link{
 //    color: #222222!important;
 //}
+
+
+// for customer side validation use standard bootstrap functionality
+set forms to be novalidate
+set each field to be required
+added script,js file to validate input
