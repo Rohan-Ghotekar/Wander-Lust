@@ -75,3 +75,5 @@ we use bootstrap for styling if we want to add own styling and want to override 
 set forms to be novalidate
 set each field to be required
 added script,js file to validate input
+
+now for schema val we recuired joi npm package
