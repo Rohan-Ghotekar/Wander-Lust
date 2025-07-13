@@ -23,7 +23,12 @@
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Image URL</label>
-            <input type="text" name="listing[image.url]" id="" value="<%=listing.image.url %>" class="form-control"required>
+            <input type="text" name="listing[image][url]" value="<%=listing.image.url %>" class="form-control" required>
+            <label for="image" class="form-label">filename</label>
+            <input type="text" name="listing[image][filename]" value="<%=listing.image.filename %>" class="form-control" required>
+
+            <!-- <label for="image" class="form-label">Image URL</label> -->
+            <!-- <input type="text" name="listing[image.url]" id="" value="<%=listing.image.url %>" class="form-control"required> -->
             <div class="invalid-feedback">Please enter valid url</div>
         </div>
         <div class="row">
