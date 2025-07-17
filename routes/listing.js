@@ -3,8 +3,7 @@ const router=express.Router();
 const Listing = require("../models/listing");
 const wrapAsync = require("../utils/wrapAsync.js");
 const ExpressError = require("../utils/ExpressError.js");
-
-const { listingSchema , reviewSchema} = require("../schema.js");
+const { listingSchema} = require("../schema.js");
 
 
 const validateListing = (req, res, next) => {
@@ -45,6 +44,7 @@ router.post("/",validateListing, wrapAsync(async (req, res, next) => {
     // if(!req.body.listing){
     //     throw new ExpressError(400,"Send Valid Listing Data");
     // }
+
     const newListing = new Listing(req.body.listing);
     await newListing.save();
     res.redirect("/listings");
@@ -54,7 +54,6 @@ router.post("/",validateListing, wrapAsync(async (req, res, next) => {
 // Edit route
 router.get("/:id/edit", wrapAsync(async (req, res) => {
     let { id } = req.params;
-    console.log(JSON.stringify(req.body, null, 2));
     const listing = await Listing.findById(id);
     res.render("listings/edit.ejs", { listing });
 }));
