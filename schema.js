@@ -9,8 +9,8 @@ module.exports.listingSchema = joi.object({
         price:joi.number().required().min(0),
         image: joi.object({
             filename: joi.string().allow(""),
-            url: joi.string().allow("")
-        }).optional().allow(null)
+            url: joi.string().allow(""),
+        }).allow("")
     }).required()
 });
 

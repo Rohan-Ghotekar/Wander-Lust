@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-const reviewsSchema=new schema({
+const reviewsSchema=new Schema({
     comment:String,
     rating :{
         type:Number,
@@ -11,7 +11,11 @@ const reviewsSchema=new schema({
     created_at:{
         type:Date,
         default:Date.now()
-    }
+    },
+    author:{
+        type:Schema.Types.ObjectId,
+        ref:"User",
+    },
 });
 
 const Review=mongoose.model("Review",reviewsSchema);
